@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ballon</title>
+	<script>
+	function setcolor(){
+
+		console.log("entra setcolor");
+		if(document.getElementById("juanjose").style.backgroundColor == "red"){
+			return("green");
+		}
+		else if(document.getElementById("juanjose").style.backgroundColor == "green"){
+			return("blue");
+		}
+		else if(document.getElementById("juanjose").style.backgroundColor == "blue"){
+			return("red");
+		}	
+	}
+
+	function setcolor_reverse() {
+		console.log("entra setcolor_reverse");
+		if(document.getElementById("juanjose").style.backgroundColor == "red"){
+			return("blue");
+		}
+		else if(document.getElementById("juanjose").style.backgroundColor == "green"){
+			return("red");
+		}
+		else if(document.getElementById("juanjose").style.backgroundColor == "blue"){
+			return("green");
+		}	
+	}
+
+	function mouseover(){
+		console.log("entra mouseover");
+		document.getElementById("juanjose").style.backgroundColor = setcolor_reverse();
+		if(parseFloat(document.getElementById("juanjose").style.width) > 200){
+			document.getElementById("juanjose").style.width = (parseFloat(document.getElementById("juanjose").style.width) - 10)+"px";
+			document.getElementById("juanjose").style.height = (parseFloat(document.getElementById("juanjose").style.height) - 10)+"px";
+		}
+	}
+
+	function ballon(){
+		console.log("entra click");
+		if(parseFloat(document.getElementById("juanjose").style.width) >= 420){
+			document.getElementById("juanjose").style.width = 200+"px";
+			document.getElementById("juanjose").style.height = 200+"px";
+		}
+		else{
+			document.getElementById("juanjose").style.width = (parseFloat(document.getElementById("juanjose").style.width) + 10)+"px";
+			document.getElementById("juanjose").style.height = (parseFloat(document.getElementById("juanjose").style.height) + 10)+"px";
+		}
+		document.getElementById("juanjose").style.backgroundColor = setcolor();
+	}
+	</script>
+</head>
+<body style="margin-left: 50%;margin-top: 100px;transform: translate(-50%);	position: absolute;">
+	<div id="juanjose" style="position: absolute;width: 200px;height: 200px; background-color:red;border-radius: 100%;border: 1px solid black;" onclick="ballon()" onmouseleave="mouseover()">
+	</div>
+</body>
+</html>

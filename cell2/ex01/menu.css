@@ -1,0 +1,27 @@
+body{
+	background-color: pink;
+}
+
+li {
+
+	list-style: none;
+}
+
+.hide > ul > li > ul {
+	display: none;
+}
+
+.show1:hover > ul {
+	display: block;	
+}
+
+.show2:hover > ul {
+	display: block;
+	
+}
+
+.show2 > ul {
+	display: none;
+	
+}
+

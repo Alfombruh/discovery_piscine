@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background</title>
+	<link rel="stylesheet" type="text/css" href="backgroound.css">
+	<script>
+	function getRandomColor() {
+  		var letters = '0123456789ABCDEF';
+  		var color = '#';
+  		for (var i = 0; i < 6; i++) 
+  		{
+    		color += letters[Math.floor(Math.random() * 16)];
+  		}
+  		return color;
+	}
+	function buttom()
+	{
+		document.body.style.backgroundColor = getRandomColor();
+	}
+	</script>
+</head>
+<body>
+	<button class="buttom" onclick="buttom()">
+		<h1 style="font-size: 50px;">DO NOT CLICK</h1>
+	</button>
+</body>
+</html>
